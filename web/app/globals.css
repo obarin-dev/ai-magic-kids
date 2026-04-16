@@ -1,0 +1,94 @@
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", sans-serif;
+  background: linear-gradient(180deg, #fff9fd 0%, #f4fbff 100%);
+  color: #3c3150;
+}
+
+.page {
+  min-height: 100vh;
+  padding: 24px;
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  width: min(760px, 100%);
+  background: rgba(255, 255, 255, 0.85);
+  border: 2px solid #ffd8ea;
+  border-radius: 24px;
+  box-shadow: 0 14px 30px rgba(173, 129, 191, 0.15);
+  padding: 24px;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.subtitle {
+  margin: 8px 0 20px;
+  color: #6d5e80;
+}
+
+.uploadBox {
+  border: 2px dashed #c8b9ff;
+  border-radius: 20px;
+  background: #fff;
+  padding: 18px;
+}
+
+.uploadLabel {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: #ff7eb6;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+}
+
+.hint {
+  margin: 10px 0 0;
+  font-size: 0.92rem;
+  color: #7a6a8f;
+}
+
+.fileName {
+  margin-top: 12px;
+  font-weight: 700;
+  color: #4d3c68;
+}
+
+.previewWrap {
+  margin-top: 16px;
+  border-radius: 14px;
+  border: 1px solid #eee2f8;
+  overflow: hidden;
+  background: #fcfbff;
+  display: grid;
+  place-items: center;
+  min-height: 260px;
+}
+
+.previewImg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.empty {
+  color: #998aaa;
+  font-size: 0.95rem;
+}
