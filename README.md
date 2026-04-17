@@ -65,7 +65,7 @@ npm run dev
 
 ターミナルに `http://localhost:3000` と出たら、**そのターミナルは開いたまま**ブラウザで同じ URL を開いてください。`npm run dev` を止めるとページは表示されません。
 
-表示がおかしいときは、一度 `.next` を消してから `npm run dev` をやり直してください。
+表示がおかしいときや、`Cannot find module './276.js'` のようなチャンクエラーが出たときは、一度 `.next` を消してから `npm run dev` をやり直してください。
 
 ```bash
 cd /Users/nishizonoyukari/ai-magic-kids/web
@@ -74,6 +74,10 @@ npm run dev
 ```
 
 （ファイル監視で `EMFILE` が出る環境向けに、`npm run dev` はポーリング監視を有効にしています。）
+
+トップ（`/`）で画像を選び **「AIで読み取る」** のあと **「あそびへすすむ」** で **`/play`** に遷移します。骨格と画像は `sessionStorage` に一時保存されます（タブを閉じると消えます）。`/play` では **「あるく」「ジャンプ」「まわる」** ブロックを並べ、**「これでうごかす」** で順番にアニメーションします。プレビューは画面幅・高さに合わせて縮小表示されます。
+
+`web/.env.local` に `GEMINI_API_KEY` を設定すると、画面上の **「AIで読み取る」** から Gemini（既定: **`gemini-2.5-flash`**）で骨格推定を試せます。`gemini-2.0-flash` は無料枠でクォータ `limit: 0`（429）になることがあります。モデルは `GEMINI_MODEL` で上書き可能です。無料枠は 1 日あたりの回数に上限があるため、[レート制限](https://ai.google.dev/gemini-api/docs/rate-limits) を確認してください。API キーは Git に含めないでください（`.gitignore` 済み）。
 
 ---
 
